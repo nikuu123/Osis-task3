@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>tempreture converter</title>
+</head>
+<body>
+
+  <div class="contenar">
+    <div>
+        <h1>TEMPRETURE-CONVERTER</h1>
+         <div class="box">
+             <label>Temprature in Celsius</label>
+             <input type="number" id="cel" value="0" placeholder="Enter celsias">
+             <label>Temprature in Fahrenheit</label>
+             <input type="number" id="fah" value="32" placeholder="Enter ferenhite">
+         </div>
+    </div>
+  </div>
+
+
+  <script>
+    var cel = document.getElementById("cel");
+    var fah = document.getElementById("fah");
+
+    cel.addEventListener('input',function(){
+      let c=this.value;
+      let f=(c*9/5)+32;
+      fah.value=f;
+    });
+
+    fah.addEventListener('input',function(){
+      let f=this.value;
+      let c=(f-32)*5/9;
+      cel.value=c;
+    });
+
+  </script>
+</body>
+</html>
